@@ -1,0 +1,228 @@
+:root{
+    /* Light Theme */
+    --Light__Bg: #ECF0F3;
+    --Light__Shadow1: #D1D9E6;
+    --Light__Shadow2: #ffffff;
+    /* Dark Theme */
+    --Dark__Bg: #292D32;
+    --Dark__Shadow1: #212427;
+    --Dark__Shadow2: #30343A;
+}
+.dark {
+    background-color: var(--Dark__Bg);
+}
+
+*{ 
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: gray;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body, html {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #ECF0F3;
+    transition: all .3s ease;
+}
+
+
+/* Main Container */
+.container{
+    width: 100%;
+    height: 100%;
+    padding: 6rem 20rem;
+}
+body.dark .content__grid {
+    background-color: var(--Dark__Bg);
+    box-shadow:  10px 10px 20px var(--Dark__Shadow1),
+                -10px -10px 20px var(--Dark__Shadow2);
+}
+/* Grid Container */
+
+
+.content__grid{
+    transition: all .3s ease;
+    min-height: 0;
+    max-height: 100%;
+    width: 100%;
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 5rem;
+    border-radius: 47px;
+    background: var(--Light__Bg);
+    box-shadow:  10px 10px 20px var(--Light__Shadow1),
+                -10px -10px 20px var(--Light__Shadow2);
+}
+
+/* Form */
+
+.form__container{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+form{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+/* Switch Button */
+
+.switch__container{
+    transition: all .3s ease;
+    width: 5rem;
+    height: 3rem;
+    background-color: var(--Light__Bg);
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    border-radius: 50px;
+    box-shadow: inset  10px 10px 20px var(--Light__Shadow1),
+                inset -10px -10px 20px var(--Light__Shadow2);
+}
+            
+body.dark .switch__container{
+    background-color: var(--Dark__Bg);
+    border-radius: 50px;
+    box-shadow: inset  10px 10px 20px var(--Dark__Shadow1),
+                inset -10px -10px 20px var(--Dark__Shadow2);
+}
+            
+.switch__btn-container{
+    position: relative;
+    background-color: white;
+}
+.switch__btn{
+    transition: all .3s ease;
+    position: absolute;
+    top: 0.5rem;
+    cursor: pointer;
+    width: 2rem;
+    left: 0.5rem;
+    height: 2rem;
+    background-color: gray;
+    border-radius: 100%;
+    border: none;
+}
+.toggle{
+    left: 2.5rem;
+}
+/* input  */
+
+input {
+    transition: all .3s ease;
+    width: 70%;
+    border: none;
+    padding: 1.5rem;
+    font-size: 25px;
+    border-radius: 47px;
+    background: var(--Light__Bg);
+    box-shadow: inset 10px 10px 20px var(--Light__Shadow1),
+                inset -10px -10px 20px var(--Light__Shadow2);
+}
+body.dark input{
+    background: var(--Dark__Bg);
+    box-shadow: inset 10px 10px 20px var(--Dark__Shadow1),
+                inset -10px -10px 20px var(--Dark__Shadow2);
+}
+input:focus{
+    outline: none;
+}
+
+/* button */
+
+form button {
+    cursor: pointer;
+    transition: all .3s ease;
+    border: none;
+    font-size: 20px;
+    padding: 1rem 2rem;
+    border-radius: 47px;
+    background: var(--Light__Bg);
+    box-shadow:  10px 10px 20px var(--Light__Shadow1),
+                -10px -10px 20px var(--Light__Shadow2);
+}
+form button:hover{
+    box-shadow: inset  10px 10px 20px var(--Light__Shadow1),
+                inset -10px -10px 20px var(--Light__Shadow2);
+}
+body.dark form button:hover{
+    box-shadow: inset  10px 10px 20px var(--Dark__Shadow1),
+                inset -10px -10px 20px var(--Dark__Shadow2);
+}
+body.dark form button{
+    background: var(--Dark__Bg);
+    box-shadow:  10px 10px 20px var(--Dark__Shadow1),
+                -10px -10px 20px var(--Dark__Shadow2);
+}
+
+/* Example */
+
+.text__example{   
+    width: 100%;
+    margin: 1rem;
+    font-size: 20px;
+}
+/* Content Container */
+
+
+.content__container{
+    transition: all .3s ease;
+    padding: 2rem;
+    height: calc(100vh - 16rem);
+    width: 100%;
+    border-radius: 47px;
+    background: var(--Light__Bg);
+    box-shadow:  10px 10px 20px var(--Light__Shadow1),
+                -10px -10px 20px var(--Light__Shadow2);
+}
+.content__container pre {
+    height: 100%;
+    overflow-y: auto;
+} 
+
+body.dark .content__container{
+    background: var(--Dark__Bg);
+    box-shadow:  10px 10px 20px var(--Dark__Shadow1),
+                -10px -10px 20px var(--Dark__Shadow2);
+}
+
+/* scroll bar */
+
+
+.content__container pre::-webkit-scrollbar{
+    background-color: var(--Light__Shadow2);
+    width: 1rem;
+    border-radius: 20px;
+    box-shadow: inset  10px 10px 20px var(--Light__Shadow1),
+                inset -10px -10px 20px var(--Light__Shadow2);
+}
+.content__container pre::-webkit-scrollbar-thumb{
+    background-color:  var(--Light__Shadow1);
+    border-radius: 20px;
+    box-shadow:  10px 10px 20px var(--Light__Shadow1),
+                -10px -10px 20px var(--Light__Shadow2);
+}
+body.dark .content__container pre::-webkit-scrollbar{
+    background-color: var(--Dark__Shadow2);
+    width: 1rem;
+    border-radius: 20px;
+    box-shadow: inset  10px 10px 20px var(--Dark__Shadow1),
+                inset -10px -10px 20px var(--Dark__Shadow2);
+}
+body.dark .content__container pre::-webkit-scrollbar-thumb{
+    background-color:  var(--Dark__Shadow1);
+    border-radius: 20px;
+    box-shadow:  10px 10px 20px var(--Dark__Shadow1),
+                -10px -10px 20px var(--Dark__Shadow2);
+}
